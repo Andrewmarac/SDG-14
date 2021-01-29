@@ -4,10 +4,10 @@ const MongoClient = require('mongodb').MongoClient;
 
 
 router.get('/', function (req, res, next) {
- const uri = TUA_STRINGA_DI_CONNESSIONE
+ const uri = "mongodb+srv://andrewjm:andrewko08@cluster0.glqtn.mongodb.net/Cluster0?retryWrites=true&w=majority";
  const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
  client.connect(err => {
- const collection = client.db("sample_mflix").collection("movies"); 
+ const collection = client.db("Goal14_DB").collection("target14_1"); 
 
 
  collection.find().limit(10).toArray((err, result) => {
